@@ -1,0 +1,20 @@
+# Core face recognition and computer vision
+deepface==0.0.79
+opencv-python==4.8.1.78
+tensorflow==2.13.0
+
+# Data processing
+numpy==1.24.3
+pillow==10.0.1
+pandas==2.0.3
+
+# Notifications and alerts
+plyer==2.1.0
+python-telegram-bot==20.6
+
+# Configuration and utilities
+python-dotenv==1.0.0
+
+# Optional: For Jupyter Lab development
+# jupyter==1.0.0
+# jupyterlab==4.0.5
