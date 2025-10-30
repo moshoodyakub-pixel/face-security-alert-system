@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Design Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Solar System Design Report</h1>
+
+    <h2>System Summary</h2>
+    <ul>
+        <li><strong>Total Daily Energy Consumption:</strong> {{ report.total_load }}</li>
+        <li><strong>Average Peak Sun Hours:</strong> {{ report.peak_sun_hours }}</li>
+        <li><strong>System Voltage:</strong> {{ report.system_voltage }}</li>
+    </ul>
+
+    <h2>Component Sizing</h2>
+    <ul>
+        <li><strong>Required Solar Panel Wattage:</strong> {{ report.required_panel_wattage }}</li>
+        <li><strong>Solar Panel Suggestions:</strong>
+            <ul>
+                {% for suggestion in report.panel_suggestions %}
+                <li>{{ suggestion }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li><strong>Required Battery Capacity:</strong> {{ report.battery_capacity }}</li>
+        <li><strong>Recommended Inverter Size:</strong> {{ report.inverter_size }}</li>
+        <li><strong>Recommended MPPT Charge Controller Size:</strong> {{ report.mppt_size }}</li>
+    </ul>
+
+    <a href="/">Calculate Again</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    margin: 2em;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    margin-top: 2em;
+}
+
+.appliance {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.appliance input {
+    margin-right: 1em;
+}
+
+#add-appliance {
+    margin-bottom: 2em;
+}
