@@ -11,7 +11,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import logging
-from tqdm import tqdm
 from src.database_manager import DatabaseManager
 from utils.logger import setup_logging
 from config import DATABASE_CONFIG, LOGGING_CONFIG

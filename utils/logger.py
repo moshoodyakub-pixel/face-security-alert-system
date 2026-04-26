@@ -6,6 +6,7 @@ Implements log rotation and date-based log files.
 
 import logging
 import sys
+import functools
 from pathlib import Path
 from datetime import datetime
 from logging.handlers import RotatingFileHandler
@@ -143,6 +144,7 @@ def log_function_call(func):
         def my_function(arg1, arg2):
             return result
     """
+    @functools.wraps(func)
     def wrapper(*args, **kwargs):
         logger = get_logger(func.__module__)
         logger.debug(f"Calling {func.__name__}() with args={args}, kwargs={kwargs}")
@@ -169,6 +171,7 @@ def log_execution_time(func):
     """
     import time
     
+    @functools.wraps(func)
     def wrapper(*args, **kwargs):
         logger = get_logger(func.__module__)
         start_time = time.time()

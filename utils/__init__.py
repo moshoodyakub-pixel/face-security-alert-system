@@ -9,7 +9,8 @@ from .image_processing import (
     normalize_image,
     check_image_quality,
     align_face,
-    convert_color_space
+    convert_color_space,
+    enhance_image
 )
 
 __all__ = [
@@ -20,4 +21,5 @@ __all__ = [
     "check_image_quality",
     "align_face",
     "convert_color_space",
+    "enhance_image",
 ]

@@ -222,14 +222,9 @@ class AlertSystem:
             return False
         
         try:
-            # Run async function in event loop
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            result = loop.run_until_complete(
+            return asyncio.run(
                 self._send_telegram_message_async(message, photo_path)
             )
-            loop.close()
-            return result
             
         except Exception as e:
             logger.error(f"Error in Telegram alert wrapper: {e}")
