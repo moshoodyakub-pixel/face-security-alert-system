@@ -42,7 +42,36 @@ Built with Python, DeepFace, and Jupyter Lab as a learning and portfolio project
 
 ## 🚀 Quick Start
 
-### 3-Step Setup
+### Windows One-Click Setup (Recommended)
+
+Four batch scripts are included so you never have to open a terminal after the initial setup:
+
+| Script | Purpose |
+|--------|---------|
+| `setup.bat` | **Run once** – creates a virtual environment and installs all dependencies |
+| `start.bat` | Starts the security system (double-click or use the desktop shortcut) |
+| `stop.bat` | Stops a running instance from another window or the desktop shortcut |
+| `create_shortcuts.bat` | Places **"Face Security - Start"** and **"Face Security - Stop"** shortcuts on your Desktop |
+
+#### First-time setup (4 steps)
+
+```
+1. Clone / download this repository to your PC
+2. Double-click  setup.bat          ← installs everything
+3. Double-click  create_shortcuts.bat  ← adds shortcuts to your Desktop
+4. Use the shortcuts or the scripts below to add faces, then start the system
+```
+
+```bat
+REM Add your face photos and build the recognition database
+python scripts\add_new_person.py
+python scripts\train_known_faces.py
+```
+
+After that just double-click the **"Face Security - Start"** shortcut on your Desktop.  
+Press **Q** in the video window (or double-click **"Face Security - Stop"**) to stop.
+
+### Command-Line Setup (Alternative)
 
 ```bash
 # 1. Install dependencies
@@ -119,6 +148,10 @@ face-security-alert-system/
 ├── ⚙️ config.py                    # Configuration settings
 ├── 🔒 .env.example                 # Environment template
 ├── 🚫 .gitignore                   # Git ignore rules
+├── 🪟 setup.bat                    # One-time setup (venv + dependencies)
+├── ▶️  start.bat                    # Start the security system
+├── ⏹️  stop.bat                     # Stop the security system
+├── 🔗 create_shortcuts.bat         # Create Desktop shortcuts
 │
 ├── 📓 notebooks/                   # Jupyter Lab tutorials
 │   ├── 01_setup_and_testing.ipynb
