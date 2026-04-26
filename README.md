@@ -51,7 +51,7 @@ Four batch scripts are included so you never have to open a terminal after the i
 | `setup.bat` | **Run once** – creates a virtual environment and installs all dependencies |
 | `start.bat` | Starts the security system (double-click or use the desktop shortcut) |
 | `stop.bat` | Stops a running instance from another window or the desktop shortcut |
-| `create_shortcuts.bat` | Places **"Face Security – Start"** and **"Face Security – Stop"** shortcuts on your Desktop |
+| `create_shortcuts.bat` | Places **"Face Security - Start"** and **"Face Security - Stop"** shortcuts on your Desktop |
 
 #### First-time setup (4 steps)
 
@@ -68,8 +68,8 @@ python scripts\add_new_person.py
 python scripts\train_known_faces.py
 ```
 
-After that just double-click the **"Face Security – Start"** shortcut on your Desktop.  
-Press **Q** in the video window (or double-click **"Face Security – Stop"**) to stop.
+After that just double-click the **"Face Security - Start"** shortcut on your Desktop.  
+Press **Q** in the video window (or double-click **"Face Security - Stop"**) to stop.
 
 ### Command-Line Setup (Alternative)
 
